@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
             GameObject shell = Instantiate(ShellPrefab, transform.position, Quaternion.identity);//’e‚ÌPrefab‚ğ¶¬
             Rigidbody shellRb = shell.GetComponent<Rigidbody>();//’e‚ÌRigidbody‚ğæ“¾
             shellRb.AddForce(transform.forward * 500);//’e‚ÌˆÚ“®‘¬“x
-            Destroy(shell, 5);//5•bŒã‚É’e‚ğíœ
+            Destroy(shell, 4);//4•bŒã‚É’e‚ğíœ
         }
     }
 }
