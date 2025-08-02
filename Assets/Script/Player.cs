@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField,Header("移動速度")]//これをすることによってunity画面でも速度の編集が可能
     private float moveSpeed;//移動速度を入れるための変数
 
-    public GameObject ShellPrefab;
+    public GameObject ShellPrefab;//弾のPrefabを入れるための変数
     // Start is called before the first frame update
     void Start()
     {
