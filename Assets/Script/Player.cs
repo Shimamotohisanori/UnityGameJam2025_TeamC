@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using TMPro;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -9,15 +10,11 @@ public class Player : MonoBehaviour
     private float moveSpeed;//移動速度を入れるための変数
 
     public GameObject ShellPrefab;//弾のPrefabを入れるための変数
-
-    public GameObject asteroid_mod_01_lowPrefab;//小惑星のPrefabを入れるための変数
     
-    [SerializeField,Header("プレイヤーの残機")]    
-    public float life = 3;//プレイヤーのライフを入れるための変数
     // Start is called before the first frame update
     void Start()
     {
-       
+        
     }
 
     // Update is called once per frame
@@ -85,17 +82,5 @@ public class Player : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.CompareTag("Meteo"))
-        {
- 
-            life--;//ライフを1減らす
-            if (life < 1)
-            {
-                Destroy(gameObject);//プレイヤーが小惑星に当たったらプレイヤーを削除
-            }
-        }
-    }
-
+   
 }
