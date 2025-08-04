@@ -10,11 +10,12 @@ public class Player : MonoBehaviour
 
     public GameObject ShellPrefab;//弾のPrefabを入れるための変数
 
-   
+    public GameObject asteroid_mod_01_lowPrefab;//小惑星のPrefabを入れるための変数
+    Rigidbody rb;//Rigidbodyを入れるための変数
     // Start is called before the first frame update
     void Start()
     {
-       
+       rb = GetComponent<Rigidbody>();//Rigidbodyを取得
     }
 
     // Update is called once per frame
@@ -62,6 +63,15 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3(0, 0, 10);//プレイヤーの位置をリセット
         }
+
+
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("asteroid_mod_01_low"))
+        {
+            Destroy(gameObject);//プレイヤーが小惑星に当たったらプレイヤーを削除
+        }
+    }
 }

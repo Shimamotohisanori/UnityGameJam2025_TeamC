@@ -202,6 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 12.5
   ShellPrefab: {fileID: 6112561598063343949, guid: 300e0d5add5337f4b8d5b9ec3bee0f94, type: 3}
+  asteroid_mod_01_lowPrefab: {fileID: 539131017}
 --- !u!1001 &539131016
 PrefabInstance:
   m_ObjectHideFlags: 0
