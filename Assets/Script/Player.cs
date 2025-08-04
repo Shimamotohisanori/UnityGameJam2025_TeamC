@@ -64,12 +64,12 @@ public class Player : MonoBehaviour
             transform.position = new Vector3(0, 0, 10);//プレイヤーの位置をリセット
         }
 
-
+        
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if(other.gameObject.CompareTag("asteroid_mod_01_low"))
+        if(collision.gameObject.CompareTag("asteroid_mod_01_low"))
         {
             Destroy(gameObject);//プレイヤーが小惑星に当たったらプレイヤーを削除
         }
