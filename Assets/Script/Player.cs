@@ -19,19 +19,19 @@ public class Player : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.W))//Wキーを押している間上に動く
         {
-            transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
+            transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
         }
         if(Input.GetKey(KeyCode.S))//Sキーを押している間下に動く
         {
-            transform.Translate(Vector3.down * moveSpeed * Time.deltaTime);
+            transform.Translate(Vector3.back * moveSpeed * Time.deltaTime);
         }
         if(Input.GetKey(KeyCode.A))//Aキーを押している間後ろに動く
         {
-            transform.Translate(Vector3.back * moveSpeed * Time.deltaTime);
+            transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
         }
         if(Input.GetKey(KeyCode.D))//Dキーを押している間前に動く
         {
-            transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+            transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
         }
 
         if (Input.GetKeyDown(KeyCode.Space))//スペースキーを押したら弾を出す
