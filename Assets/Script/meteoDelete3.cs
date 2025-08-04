@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Meteorite3 : MonoBehaviour
+public class meteoDelte3 : MonoBehaviour
 {
-    public GameObject ball;
-    private float count = 1.0f;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +13,9 @@ public class Meteorite3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        count -= Time.deltaTime;
-        if (count <= 0)
+        if (this.transform.position.y < -10)
         {
-            Instantiate(ball, new Vector3(6, 16, 6), Quaternion.identity);
-            count = 1.0f;
+            Destroy(gameObject);
         }
     }
 }

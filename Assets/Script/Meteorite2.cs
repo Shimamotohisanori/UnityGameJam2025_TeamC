@@ -20,7 +20,7 @@ public class Meteorite2 : MonoBehaviour
         count -= Time.deltaTime;
         if (count <= 0)
         {
-            Instantiate(ball, new Vector3(5, 11, 5), Quaternion.identity);
+            Instantiate(ball, new Vector3(8, 15, 8), Quaternion.identity);
             count = 1.0f;
         }
     }
