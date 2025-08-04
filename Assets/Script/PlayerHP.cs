@@ -6,9 +6,7 @@ using UnityEngine;
 public class PlayerHP : MonoBehaviour
 {
     [SerializeField, Header("プレイヤーの残機")]
-    public int life = 3;//プレイヤーのライフを入れるための変数
-
-    private int TextLife;//ライフを表示するための変数
+    public int life = 5;//プレイヤーのライフを入れるための変数
 
     public TextMeshProUGUI lifeText;//ライフを表示するためのTextMeshProUGUIコンポーネント
 
