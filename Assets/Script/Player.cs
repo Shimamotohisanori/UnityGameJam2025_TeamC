@@ -74,4 +74,5 @@ public class Player : MonoBehaviour
             Destroy(gameObject);//プレイヤーが小惑星に当たったらプレイヤーを削除
         }
     }
+
 }
