@@ -10,7 +10,12 @@ public class Player : MonoBehaviour
     private float moveSpeed;//ˆÚ“®‘¬“x‚ğ“ü‚ê‚é‚½‚ß‚Ì•Ï”
 
     public GameObject ShellPrefab;//’e‚ÌPrefab‚ğ“ü‚ê‚é‚½‚ß‚Ì•Ï”
-    
+
+    [SerializeField, Header("’e‚ÌˆÚ“®‘¬“x")]
+    private float shellSpeed = 700f; // ’e‚ÌˆÚ“®‘¬“x‚ğ“ü‚ê‚é‚½‚ß‚Ì•Ï”
+
+    [SerializeField, Header("’e‚ÌíœŠÔ")]
+    private float shellDestroyTime = 3f; // ’e‚ÌíœŠÔ‚ğ“ü‚ê‚é‚½‚ß‚Ì•Ï”
     // Start is called before the first frame update
     void Start()
     {
@@ -58,8 +63,8 @@ public class Player : MonoBehaviour
         {       
                 GameObject shell = Instantiate(ShellPrefab, transform.position, Quaternion.identity);//’e‚ÌPrefab‚ğ¶¬
                 Rigidbody shellRb = shell.GetComponent<Rigidbody>();//’e‚ÌRigidbody‚ğæ“¾
-                shellRb.AddForce(transform.forward * 700);//’e‚ÌˆÚ“®‘¬“x
-                Destroy(shell, 3);//3•bŒã‚É’e‚ğíœ
+                shellRb.AddForce(transform.forward * shellSpeed);//’e‚ÌˆÚ“®‘¬“x
+                Destroy(shell, shellDestroyTime);//3•bŒã‚É’e‚ğíœ
         }
 
         if(transform.position.y < -14)//ƒvƒŒƒCƒ„[‚ª‰º‚É—‚¿‚½‚ç
