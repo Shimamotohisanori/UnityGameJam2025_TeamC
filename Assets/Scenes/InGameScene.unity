@@ -333,6 +333,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3829145124397377092, guid: d013c4364aab6b1439a0365bba950554, type: 3}
+      propertyPath: m_TagString
+      value: Meteo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7589651159279960668, guid: d013c4364aab6b1439a0365bba950554, type: 3}

@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("asteroid_mod_01_low"))
+        if(collision.gameObject.CompareTag("Meteo"))
         {
             Destroy(gameObject);//プレイヤーが小惑星に当たったらプレイヤーを削除
         }
