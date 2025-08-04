@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
 
     public GameObject asteroid_mod_01_lowPrefab;//小惑星のPrefabを入れるための変数
     
+    [SerializeField,Header("プレイヤーの残機")]    
+    public float life = 3;//プレイヤーのライフを入れるための変数
     // Start is called before the first frame update
     void Start()
     {
@@ -21,30 +23,46 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        if (Input.GetKey(KeyCode.W))//Wキーを押している間上に動く
+
+        if (Input.GetKey(KeyCode.UpArrow))//上矢印キーを押している間上に動く
         {
             transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
         }
-        if(Input.GetKey(KeyCode.S))//Sキーを押している間下に動く
+        if (Input.GetKey(KeyCode.DownArrow))//下矢印キーを押している間下に動く
         {
             transform.Translate(Vector3.back * moveSpeed * Time.deltaTime);
         }
-        if(Input.GetKey(KeyCode.A))//Aキーを押している間後ろに動く
+        if (Input.GetKey(KeyCode.LeftArrow))//左矢印キーを押している間後ろに動く
         {
             transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
         }
-        if(Input.GetKey(KeyCode.D))//Dキーを押している間前に動く
+        if (Input.GetKey(KeyCode.RightArrow))//右矢印キーを押している間前に動く
         {
             transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
         }
+        //if (Input.GetKey(KeyCode.W))//Wキーを押している間上に動く
+        //{
+        //    transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+        //}
+        //if(Input.GetKey(KeyCode.S))//Sキーを押している間下に動く
+        //{
+        //    transform.Translate(Vector3.back * moveSpeed * Time.deltaTime);
+        //}
+        //if(Input.GetKey(KeyCode.A))//Aキーを押している間後ろに動く
+        //{
+        //    transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
+        //}
+        //if(Input.GetKey(KeyCode.D))//Dキーを押している間前に動く
+        //{
+        //    transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+        //}
 
         if (Input.GetKeyDown(KeyCode.Space))//スペースキーを押したら弾を出す
-        {
-            GameObject shell = Instantiate(ShellPrefab, transform.position, Quaternion.identity);//弾のPrefabを生成
-            Rigidbody shellRb = shell.GetComponent<Rigidbody>();//弾のRigidbodyを取得
-            shellRb.AddForce(transform.forward * 500);//弾の移動速度
-            Destroy(shell, 4);//4秒後に弾を削除
+        {       
+                GameObject shell = Instantiate(ShellPrefab, transform.position, Quaternion.identity);//弾のPrefabを生成
+                Rigidbody shellRb = shell.GetComponent<Rigidbody>();//弾のRigidbodyを取得
+                shellRb.AddForce(transform.forward * 700);//弾の移動速度
+                Destroy(shell, 3);//3秒後に弾を削除
         }
 
         if(transform.position.y < -14)//プレイヤーが下に落ちたら
@@ -71,7 +89,12 @@ public class Player : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Meteo"))
         {
-            Destroy(gameObject);//プレイヤーが小惑星に当たったらプレイヤーを削除
+ 
+            life--;//ライフを1減らす
+            if (life < 1)
+            {
+                Destroy(gameObject);//プレイヤーが小惑星に当たったらプレイヤーを削除
+            }
         }
     }
 
