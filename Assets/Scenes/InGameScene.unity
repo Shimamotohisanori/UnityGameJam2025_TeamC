@@ -260,7 +260,8 @@ MonoBehaviour:
   moveSpeed: 12.5
   ShellPrefab: {fileID: 6112561598063343949, guid: 300e0d5add5337f4b8d5b9ec3bee0f94, type: 3}
   shellSpeed: 700
-  shellDestroyTime: 2.7
+  shellDestroyTime: 1.8
+  timeinterval: 0.5
 --- !u!114 &349484296
 MonoBehaviour:
   m_ObjectHideFlags: 0
