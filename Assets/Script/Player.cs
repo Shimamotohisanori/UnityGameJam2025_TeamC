@@ -21,10 +21,13 @@ public class Player : MonoBehaviour
 
     [SerializeField,Header("連射間隔")]
     private float timeinterval = 0.5f; // 連射間隔を入れるための変数
+
+    private AudioSource audioSource; // AudioSourceコンポーネントを入れるための変数
+    public AudioClip shotSound; // 弾を撃ったときの音を入れるための変数
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>(); // AudioSourceコンポーネントを取得
     }
 
     // Update is called once per frame
@@ -69,6 +72,7 @@ public class Player : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Space))//スペースキーを押したら弾を出す
             {
+                audioSource.PlayOneShot(shotSound); // 弾を撃ったときの音を再生
                 time = 0; // 時間をリセット
                 GameObject shell = Instantiate(ShellPrefab, transform.position, Quaternion.identity);//弾のPrefabを生成
                 Rigidbody shellRb = shell.GetComponent<Rigidbody>();//弾のRigidbodyを取得
