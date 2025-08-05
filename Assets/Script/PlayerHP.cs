@@ -13,10 +13,12 @@ public class PlayerHP : MonoBehaviour
 
     public GameObject asteroid_mod_01_lowPrefab;//小惑星のPrefabを入れるための変数
 
+    private AudioSource missaudioSource; // AudioSourceコンポーネントを入れるための変数
+    public AudioClip missSound; // 機体が隕石に当たったときの音を入れるための変数
     // Start is called before the first frame update
     void Start()
     {
-        
+        missaudioSource = GetComponent<AudioSource>(); // AudioSourceコンポーネントを取得
     }
 
     // Update is called once per frame
@@ -28,7 +30,7 @@ public class PlayerHP : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Meteo"))
         {
-
+            missaudioSource.PlayOneShot(missSound); // 機体が隕石に当たったときの音を再生
             life--;//ライフを1減らす
             lifeText.text = "Life: " + life;//ライフを表示する
             if (life < 1)
