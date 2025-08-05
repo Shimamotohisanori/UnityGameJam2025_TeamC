@@ -16,6 +16,11 @@ public class Player : MonoBehaviour
 
     [SerializeField, Header("弾の削除時間")]
     private float shellDestroyTime = 3f; // 弾の削除時間を入れるための変数
+
+    private float time = 0; // 時間をカウントするための変数
+
+    [SerializeField,Header("連射間隔")]
+    private float timeinterval = 0.5f; // 連射間隔を入れるための変数
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +30,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        time += Time.deltaTime; // 時間をカウント
 
         if (Input.GetKey(KeyCode.UpArrow))//上矢印キーを押している間上に動く
         {
@@ -59,12 +65,16 @@ public class Player : MonoBehaviour
         //    transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
         //}
 
-        if (Input.GetKeyDown(KeyCode.Space))//スペースキーを押したら弾を出す
-        {       
+        if (time > timeinterval)
+        {
+            if (Input.GetKey(KeyCode.Space))//スペースキーを押したら弾を出す
+            {
+                time = 0; // 時間をリセット
                 GameObject shell = Instantiate(ShellPrefab, transform.position, Quaternion.identity);//弾のPrefabを生成
                 Rigidbody shellRb = shell.GetComponent<Rigidbody>();//弾のRigidbodyを取得
                 shellRb.AddForce(transform.forward * shellSpeed);//弾の移動速度
                 Destroy(shell, shellDestroyTime);//3秒後に弾を削除
+            }
         }
 
         if(transform.position.y < -14)//プレイヤーが下に落ちたら
