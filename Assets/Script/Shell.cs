@@ -8,7 +8,7 @@ public class Shell : MonoBehaviour
     //public string shellName = "Shell"; // 弾の名前
     public string MeteoTag = "Meteo"; // 小惑星のタグ
 
-    private static int Score = 0; // スコアを保持する静的変数
+    public static int Score = 0; // スコアを保持する静的変数
 
     public TextMeshProUGUI score;// スコアを表示するためのTextMeshProUGUIコンポーネント
 
