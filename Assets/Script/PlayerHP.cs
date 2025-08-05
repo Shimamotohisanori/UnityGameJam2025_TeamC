@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHP : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class PlayerHP : MonoBehaviour
             lifeText.text = "Life: " + life;//ライフを表示する
             if (life < 1)
             {
+                SceneManager.LoadScene("ResultScene");//ライフが0以下になったらリザルトシーンに移動
                 Destroy(gameObject);//プレイヤーが小惑星に当たったらプレイヤーを削除
             }
         }
