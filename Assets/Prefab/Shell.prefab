@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 6244072215154801091}
   - component: {fileID: 4007431941922497487}
   - component: {fileID: -5554595590297264196}
+  - component: {fileID: -3352598429902147477}
   m_Layer: 9
   m_Name: Shell
-  m_TagString: Untagged
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,3 +134,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-3352598429902147477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6112561598063343949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77477e4f9e5188e4aad680e9245f4347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MeteoTag: Meteo
+  score: {fileID: 1526983855574180131, guid: 27c8182029e17ba42aa1ee58f350e116, type: 3}
