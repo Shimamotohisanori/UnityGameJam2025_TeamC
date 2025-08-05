@@ -259,6 +259,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 12.5
   ShellPrefab: {fileID: 6112561598063343949, guid: 300e0d5add5337f4b8d5b9ec3bee0f94, type: 3}
+  shellSpeed: 700
+  shellDestroyTime: 3
 --- !u!114 &349484296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -776,6 +778,22 @@ PrefabInstance:
       propertyPath: m_text
       value: life:5
       objectReference: {fileID: 0}
+    - target: {fileID: 8009954050321530243, guid: 13d123dd5497faa4b9114601cc994bf3, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.2595811
+      objectReference: {fileID: 0}
+    - target: {fileID: 8009954050321530243, guid: 13d123dd5497faa4b9114601cc994bf3, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8009954050321530243, guid: 13d123dd5497faa4b9114601cc994bf3, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8009954050321530243, guid: 13d123dd5497faa4b9114601cc994bf3, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4282580736
+      objectReference: {fileID: 0}
     - target: {fileID: 8229011928460526444, guid: 13d123dd5497faa4b9114601cc994bf3, type: 3}
       propertyPath: m_Name
       value: HPText (TMP)
@@ -1001,6 +1019,22 @@ PrefabInstance:
     - target: {fileID: 1526983855574180131, guid: 27c8182029e17ba42aa1ee58f350e116, type: 3}
       propertyPath: m_text
       value: 'Score: 0'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526983855574180131, guid: 27c8182029e17ba42aa1ee58f350e116, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526983855574180131, guid: 27c8182029e17ba42aa1ee58f350e116, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526983855574180131, guid: 27c8182029e17ba42aa1ee58f350e116, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.96420634
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526983855574180131, guid: 27c8182029e17ba42aa1ee58f350e116, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278255606
       objectReference: {fileID: 0}
     - target: {fileID: 3350803221115364444, guid: 27c8182029e17ba42aa1ee58f350e116, type: 3}
       propertyPath: m_Name
