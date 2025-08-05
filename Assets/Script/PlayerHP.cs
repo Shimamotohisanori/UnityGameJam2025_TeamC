@@ -32,7 +32,7 @@ public class PlayerHP : MonoBehaviour
             life--;//ライフを1減らす
             lifeText.text = "Life: " + life;//ライフを表示する
             if (life < 1)
-            {
+            { 
                 SceneManager.LoadScene("ResultScene");//ライフが0以下になったらリザルトシーンに移動
                 Destroy(gameObject);//プレイヤーが小惑星に当たったらプレイヤーを削除
             }
