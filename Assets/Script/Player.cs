@@ -81,11 +81,11 @@ public class Player : MonoBehaviour
             }
         }
 
-        if(transform.position.y < -13)//プレイヤーが下に落ちたら
+        if(transform.position.y < -10)//プレイヤーが下に落ちたら
         {
             transform.position = new Vector3(0, 0, 10);//プレイヤーの位置をリセット
         }
-        if(transform.position.y > 13)//プレイヤーが上に行きすぎたら
+        if(transform.position.y > 10)//プレイヤーが上に行きすぎたら
         {
             transform.position = new Vector3(0, 0, 10);//プレイヤーの位置をリセット
         }
