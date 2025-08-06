@@ -51,22 +51,22 @@ public class Player : MonoBehaviour
         {
             transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
         }
-        //if (Input.GetKey(KeyCode.W))//Wキーを押している間上に動く
-        //{
-        //    transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
-        //}
-        //if(Input.GetKey(KeyCode.S))//Sキーを押している間下に動く
-        //{
-        //    transform.Translate(Vector3.back * moveSpeed * Time.deltaTime);
-        //}
-        //if(Input.GetKey(KeyCode.A))//Aキーを押している間後ろに動く
-        //{
-        //    transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
-        //}
-        //if(Input.GetKey(KeyCode.D))//Dキーを押している間前に動く
-        //{
-        //    transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
-        //}
+        if (Input.GetKey(KeyCode.W))//Wキーを押している間上に動く
+        {
+            transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.S))//Sキーを押している間下に動く
+        {
+            transform.Translate(Vector3.back * moveSpeed * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.A))//Aキーを押している間後ろに動く
+        {
+            transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.D))//Dキーを押している間前に動く
+        {
+            transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+        }
 
         if (time > timeinterval)
         {
@@ -81,19 +81,19 @@ public class Player : MonoBehaviour
             }
         }
 
-        if(transform.position.y < -14)//プレイヤーが下に落ちたら
+        if(transform.position.y < -13)//プレイヤーが下に落ちたら
         {
             transform.position = new Vector3(0, 0, 10);//プレイヤーの位置をリセット
         }
-        if(transform.position.y > 14)//プレイヤーが上に行きすぎたら
+        if(transform.position.y > 13)//プレイヤーが上に行きすぎたら
         {
             transform.position = new Vector3(0, 0, 10);//プレイヤーの位置をリセット
         }
-        if (transform.position.x < -26)//プレイヤーが左に行きすぎたら
+        if (transform.position.x < -25)//プレイヤーが左に行きすぎたら
         {
             transform.position = new Vector3(0, 0, 10);//プレイヤーの位置をリセット
         }
-        if (transform.position.x > 26)//プレイヤーが右に行きすぎたら
+        if (transform.position.x > 25)//プレイヤーが右に行きすぎたら
         {
             transform.position = new Vector3(0, 0, 10);//プレイヤーの位置をリセット
         }
