@@ -35,6 +35,8 @@ public class Player : MonoBehaviour
     {
         time += Time.deltaTime; // 時間をカウント
 
+        transform.rotation = Quaternion.Euler(-90, 0, 0); // プレイヤーの傾きを固定
+
         if (Input.GetKey(KeyCode.UpArrow))//上矢印キーを押している間上に動く
         {
             transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
@@ -45,11 +47,19 @@ public class Player : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.LeftArrow))//左矢印キーを押している間後ろに動く
         {
-            transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
+            //transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
+            transform.position += new Vector3(-1, 0, 0) * moveSpeed * Time.deltaTime; //傾きを無視して左に移動
+
+            // 左に移動するときは左に傾く
+            transform.rotation = Quaternion.Euler(-90, 0, 45);            
         }
         if (Input.GetKey(KeyCode.RightArrow))//右矢印キーを押している間前に動く
         {
-            transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+            //transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+            transform.position += new Vector3(1, 0, 0) * moveSpeed * Time.deltaTime;　//傾きを無視して右に移動
+   
+            // 右に移動するときは右に傾く
+            transform.rotation = Quaternion.Euler(-90, 0, -45);
         }
         if (Input.GetKey(KeyCode.W))//Wキーを押している間上に動く
         {
@@ -61,11 +71,19 @@ public class Player : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.A))//Aキーを押している間後ろに動く
         {
-            transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
+            //transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
+            transform.position += new Vector3(-1, 0, 0) * moveSpeed * Time.deltaTime; //傾きを無視して左に移動
+
+            // 左に移動するときは左に傾く
+            transform.rotation = Quaternion.Euler(-90, 0, 45);
         }
         if (Input.GetKey(KeyCode.D))//Dキーを押している間前に動く
         {
-            transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+            //transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+            transform.position += new Vector3(1, 0, 0) * moveSpeed * Time.deltaTime; //傾きを無視して右に移動
+
+            // 右に移動するときは右に傾く
+            transform.rotation = Quaternion.Euler(-90, 0, -45);
         }
 
         if (time > timeinterval)
