@@ -265,6 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 12.5
   ShellPrefab: {fileID: 6112561598063343949, guid: 300e0d5add5337f4b8d5b9ec3bee0f94, type: 3}
+
   shellSpeed: 800
   shellDestroyTime: 1.2
   timeinterval: 1
@@ -482,6 +483,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1413496580189049540, guid: 025d47ae25045a946aa227afae5f3652, type: 3}
   m_PrefabInstance: {fileID: 2476212871530685844}
   m_PrefabAsset: {fileID: 0}
+
 --- !u!1001 &539131016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -558,10 +560,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+
+
     - target: {fileID: 3829145124397377092, guid: d013c4364aab6b1439a0365bba950554, type: 3}
       propertyPath: m_TagString
       value: Meteo
       objectReference: {fileID: 0}
+
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7589651159279960668, guid: d013c4364aab6b1439a0365bba950554, type: 3}
@@ -583,9 +588,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3829145124397377092, guid: d013c4364aab6b1439a0365bba950554, type: 3}
       insertIndex: -1
       addedObject: {fileID: 539131023}
+
     - targetCorrespondingSourceObject: {fileID: 3829145124397377092, guid: d013c4364aab6b1439a0365bba950554, type: 3}
       insertIndex: -1
       addedObject: {fileID: 539131027}
+
   m_SourcePrefab: {fileID: 100100000, guid: d013c4364aab6b1439a0365bba950554, type: 3}
 --- !u!1 &539131017 stripped
 GameObject:
@@ -646,6 +653,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+
+
 --- !u!65 &539131027
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -667,6 +676,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.2801722, y: 1.1575818, z: 0.9358297}
   m_Center: {x: 0, y: 0, z: 0}
+
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1571,6 +1581,8 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 349484289}
   - {fileID: 539131016}
+
   - {fileID: 1170240353316866747}
   - {fileID: 8627621750607468708}
   - {fileID: 7474946918534737309}
+
