@@ -13,9 +13,11 @@ public class metoriteDelte : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         //if (this.transform.position.y < -9)
         //{
         //    Destroy(gameObject);
         //}
+
     }
 }
